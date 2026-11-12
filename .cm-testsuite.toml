@@ -1,10 +1,17 @@
-# Shares one test with cm-testsuite and receives tests from it.
+# Shares tests with cm-testsuite and receives tests from it.
 schema = 1
 
 [[test]]
 name = "values/u32-add"
 path = "file:///tests/values/u32-add.wast"
 summary = "Add two u32 values through a lifted core function, including wrap-around"
+requires = ["component-model"]
+covers = ["values"]
+
+[[test]]
+name = "values/bool-is-zero"
+path = "file:///tests/values/bool-is-zero.wast"
+summary = "Observe a lifted core i32 result as a bool, for both true and false"
 requires = ["component-model"]
 covers = ["values"]
 
