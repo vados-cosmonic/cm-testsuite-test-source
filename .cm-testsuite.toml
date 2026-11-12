@@ -1,0 +1,9 @@
+# Shares tests with cm-testsuite. This repository does not receive any.
+schema = 1
+
+[[test]]
+name = "values/u32-add"
+path = "file:///tests/values/u32-add.wast"
+summary = "Add two u32 values through a lifted core function, including wrap-around"
+requires = ["component-model"]
+covers = ["values"]
